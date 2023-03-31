@@ -155,6 +155,7 @@ jobs:
             ${{ runner.os }}-node-${{ matrix.node }}-yarn-
       - name: setup environment
         run: |
+          exit 1
           go install github.com/gobuffalo/cli/cmd/buffalo@v${{ matrix.gobuffalo }}
       - name: build the binary
         run: |
